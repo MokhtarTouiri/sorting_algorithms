@@ -1,6 +1,6 @@
-#include "sort.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include "sort.h"
 
 /**
 * bubble_sort - function to sorting array
@@ -12,23 +12,21 @@
 void bubble_sort(int *array, size_t size)
 
 {
-size_t i, j;
-size_t temp;
-i = 0;
-j = 0;
-while (j < size)
+unsigned long int a, b;
+unsigned long int tmp;
+b = 0;
+while (b < size)
 {
-while(i < size - 1)
+for (a = 0; a < size - 1; a++)
 {
-if (array[i] > array[i + 1])
+if (array[a] > array[a + 1])
 {
-temp = array[i];
-array[i] = array[i + 1];
-array[i + 1] = temp;
+tmp = array[a];
+array[a] = array[a + 1];
+array[a + 1] = tmp;
 print_array(array, size);
 }
-i++;
 }
-j++
+b++;
 }
 }
