@@ -18,8 +18,7 @@ void selection_sort(int *array, size_t size)
 	a = 0;
 
 	if (!array)
-		if (!*array)
-			return;
+		return;
 	while (a < size - 1)
 	{
 		i = a;
